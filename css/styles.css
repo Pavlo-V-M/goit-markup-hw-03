@@ -1,6 +1,7 @@
 /* фон-колір:
 - білий основний #F5F5F5;
 - білий header #FFFFFF; rgba(255, 255, 255, 1)
+- білий loft-border-bottom #ececec; rgba(236, 236, 236, 1)
 - білий наша команда #F5F4FA (?????);
 - чорний герой; чорний footer #2F303A; rgba(47, 48, 58, 1) 
 текст-колір:
@@ -63,9 +64,7 @@ ul {
 }
 
 .title-features,
-.maine-title-portfolio,
-.title-portfolio,
-.title-projects {
+.maine-title-portfolio {
 	display: none;
 }
 
@@ -77,9 +76,13 @@ ul {
 	--third-background-color: #f5f4fa;
 	--main-text-color: #757575;
 	--title-text-color: #212121;
+	--loft-border-bottom: #ececec;
+	--comon-blue: #2196f3;
+	--active-blue: #188ce8;
+	--black-logo-color: #000000;
 }
 
-div.container {
+.container {
 	width: 1200px;
 	padding-right: 15px;
 	padding-left: 15px;
@@ -109,6 +112,7 @@ body {
 
 .loft {
 	border-bottom: 1px solid #ececec;
+	/* тут задати колір по-іншому неможливо - збільшиться код ... */
 }
 
 .loft .container {
@@ -137,17 +141,17 @@ body {
 .loft .logo {
 	padding-top: 24px;
 	padding-bottom: 25px;
-	
+
 	margin-left: 0;
 	margin-right: 93px;
 }
 
 .logoweb {
-	color: #2196f3;
+	color: var(--comon-blue);
 }
 
 .logostudio {
-	color: #000000;
+	color: var(--black-logo-color);
 }
 
 .site-nav {
@@ -161,7 +165,7 @@ body {
 }
 
 .site-nav .link {
-	color: #212121;
+	color: var(--title-text-color);
 
 	outline: 2px solid red;
 
@@ -172,11 +176,11 @@ body {
 
 .site-nav .link:hover,
 .site-nav .link:focus {
-	color: #2196f3;
+	color: var(--comon-blue);
 }
 
 .site-nav .link.current {
-	color: #2196f3;
+	color: var(--comon-blue);
 }
 
 .site-nav .link.studio {
@@ -187,10 +191,7 @@ body {
 	margin-right: 50px;
 }
 
-
 .site-contacts {
-	outline: 2px solid red;
-
 	font-style: normal;
 	font-weight: 500;
 	line-height: 1.14;
@@ -198,6 +199,8 @@ body {
 }
 
 .loft .site-contacts {
+	outline: 2px solid red;
+
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -205,7 +208,7 @@ body {
 
 .loft .contacts {
 	display: inline-block;
-	
+
 	padding-top: 32px;
 	padding-bottom: 32px;
 }
@@ -234,29 +237,28 @@ body {
 	outline: 2px solid red;
 
 	background-color: var(--second-background-color);
-	padding-top: 200px;
-	padding-bottom: 200px;
+	padding: 200px 0;
 }
 
-.hero h1 {
-	color: #ffffff;
+.maine-title-hero {
+	color: var(--main-background-color);
 	font-weight: 900;
 	font-size: 44px;
 	line-height: 1.36;
 	text-align: center;
 	letter-spacing: 0.06em;
+	text-transform: uppercase;
 
 	outline: 2px solid yellow;
-	margin-bottom: 30px;
-	padding-right: 425px;
-	padding-left: 425px;
+	width: 696px;
+	margin: 0 auto 30px auto;
 }
 
 .hero-button {
 	outline: 2px solid yellow;
 	cursor: pointer;
 
-	background-color: #2196f3;
+	background-color: var(--comon-blue);
 	color: #ffffff;
 	font-weight: 700;
 	font-size: 16px;
@@ -265,7 +267,6 @@ body {
 
 	display: block;
 	margin: 0 auto;
-	border: 0;
 	padding: 10px 32px;
 
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -274,15 +275,14 @@ body {
 
 .hero .hero-button:hover,
 .hero .hero-button:focus {
-	background-color: #188ce8;
+	background-color: var(--active-blue);
 }
 
 /* Розділ оформлення Фічі */
 
 .bloc-features {
 	outline: 2px solid tomato;
-	padding-top: 94px;
-	padding-bottom: 94px;
+	padding: 94px 0 94px 0;
 }
 
 .title-features-list {
@@ -300,6 +300,8 @@ body {
 
 .subtitle-feature {
 	outline: 2px solid tomato;
+
+	text-transform: uppercase;
 
 	font-weight: 700;
 	font-size: 14px;
@@ -319,7 +321,6 @@ body {
 
 .bloc-item {
 	outline: 2px solid tomato;
-	padding-top: 94px;
 	padding-bottom: 94px;
 }
 
@@ -355,8 +356,7 @@ body {
 .bloc-team {
 	outline: 2px solid tomato;
 	background-color: var(--third-background-color);
-	padding-top: 94px;
-	padding-bottom: 94px;
+	padding: 94px 0 94px 0;
 }
 
 .title-team-list {
@@ -366,10 +366,7 @@ body {
 }
 
 .title-team-list div {
-	background-color: ;
-	
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding: 30px 0 30px 0;
 }
 
 .title-team-list li:not(:last-child) {
@@ -427,9 +424,9 @@ body {
 }
 
 .filter-nav .click {
-	background-color: #f5f4fa;
+	background-color: var(--third-background-color);
 	font-family: Roboto, sans-serif;
-	color: #212121;
+	color: var(--title-text-color);
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.63;
@@ -437,12 +434,13 @@ body {
 	letter-spacing: 0.03em;
 
 	border-radius: 4px;
-	border: 0;
+	padding: 6px 22px;
+	border: ;
 }
 
 .filter-nav .click:hover,
 .filter-nav .click:focus {
-	background-color: #2196f3;
+	background-color: var(--comon-blue);
 	color: #ffffff;
 	cursor: pointer;
 }
@@ -450,6 +448,7 @@ body {
 .filter-nav .click.all {
 	/*shadow-middle */
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+	padding: 6px 25px;
 }
 
 .title-projects-list {
@@ -464,6 +463,7 @@ body {
 	margin: 0;
 	padding: 20px 24px;
 	border: 0 1px 1px 1px 1px solid #eeeeee;
+	/* в цьоу місці задати колір по-іншому неможливо */
 }
 
 .title-projects-list .list-item {
@@ -475,7 +475,7 @@ body {
 	margin-right: 0px;
 }
 
-.title-projects-list .list-item:nth-last-child(-n +3) {
+.title-projects-list .list-item:nth-last-child(-n + 3) {
 	margin-bottom: 0px;
 }
 
@@ -502,34 +502,37 @@ body {
 
 .base {
 	background-color: var(--second-background-color);
-	padding-top: 60px;
-	padding-bottom: 60px;
-}
-
-.base .logo {
-	display: inline-block;
+	padding: 60px 0;
 }
 
 .base .logostudio {
-	color: #ffffff;
+	color: var(--main-background-color);
+}
+
+.base-address {
+	outline: 2px solid red;
+	margin-top: 20px;
 }
 
 .base .site-contacts {
 	outline: 2px solid yellow;
-	display: inline-block;
-	margin-top: 20px;
+	max-width: 231px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 9px;
 }
 
-.base .site-contacts:not(:last-child) {
+/* .base .site-contacts:not(:last-child) {
 	margin-bottom: 9px;
-}
+} */
 
-.base .site-contacts .address {
+.base .address {
 	outline: 2px solid red;
 
 	font-style: normal;
 	font-weight: 400;
-	color: #ffffff;
+	color: var(--main-background-color);
 	line-height: 1.71;
 	letter-spacing: 0.03em;
 }
