@@ -268,6 +268,7 @@ body {
 	display: block;
 	margin: 0 auto;
 	padding: 10px 32px;
+	border: 0;
 
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
@@ -367,6 +368,12 @@ body {
 
 .title-team-list div {
 	padding: 30px 0 30px 0;
+
+	background: var(--main-background-color);
+	/* material shadow v1 */
+	
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 0px 0px 4px 4px;
 }
 
 .title-team-list li:not(:last-child) {
@@ -375,8 +382,8 @@ body {
 
 .title-team-list li {
 	outline: 2px solid tomato;
-	background-color: var(--main-background-color);
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	/* background-color: var(--main-background-color);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
 }
 
 .subtitle-team {
@@ -435,7 +442,7 @@ body {
 
 	border-radius: 4px;
 	padding: 6px 22px;
-	border: ;
+	border: 0;
 }
 
 .filter-nav .click:hover,
