@@ -299,6 +299,35 @@ body {
 	margin-right: 30px;
 }
 
+.title-features-list .list-item::before {
+	display: block;
+	outline: 2px solid red;
+	/* content: "";
+	/* width: 80px; */
+	/* height: 40px;
+	
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: ; */
+}
+
+.title-features-list .list-item:nth-child(1)::before {
+	background-image: ;
+}
+
+.title-features-list .list-item:nth-child(2)::before {
+	background-image: ;
+}
+
+.title-features-list .list-item:nth-child(3)::before {
+	background-image: ;
+}
+
+.title-features-list .list-item:nth-child(4)::before {
+	background-image: ;
+}
+
 .subtitle-feature {
 	outline: 2px solid tomato;
 
